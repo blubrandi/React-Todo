@@ -32,6 +32,12 @@ class App extends React.Component {
     })
   }
 
+  clearCompleted = event => {
+    event.preventDefault()
+    let todos = this.state.todos.filter(todo => !todo.completed )
+    this.setState({ todos })
+    }
+
 
 
   addNewTask = (event) => {
@@ -74,7 +80,10 @@ class App extends React.Component {
         <TodoForm 
           value={this.state.todo}
           addNewTask={this.addNewTask}
-          handleChanges={this.handleChanges}/>
+          handleChanges={this.handleChanges}
+          clearCompleted={this.clearCompleted}
+          />
+          
       </div>
     );
   }
