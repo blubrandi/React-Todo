@@ -44,6 +44,7 @@ class App extends React.Component {
   }
 
   toggleItem = todoId => {
+    console.log(` toggleItem ${todoId}`)
     this.setState(prevState => {
       return {
         todos: prevState.todos.map(todo => {
@@ -67,7 +68,7 @@ class App extends React.Component {
         <h1>This is your Todo List:</h1>
         <TodoList
           todos = {this.state.todos}
-          toggleItem={this.toggleItem} 
+          toggleItem={this.toggleItem}
           />
 
         <TodoForm 
