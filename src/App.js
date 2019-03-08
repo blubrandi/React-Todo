@@ -35,7 +35,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Testing Output</h1>
+        <h1>This is your Todo List:</h1>
         <TodoList todos = {this.state.todos} />
         <TodoForm 
           value={this.state.todo}
