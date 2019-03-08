@@ -4,8 +4,12 @@ import React from 'react';
 const Todo = props => {
 
     return(
-         <div>
-            {props.task}
+         <div className="task" 
+         onClick={event => {
+            props.toggleItem(props.todo.id);
+          }}>
+          <p>{props.task}</p>
+            
         </div>
     );
 };
