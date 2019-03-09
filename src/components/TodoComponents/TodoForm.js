@@ -1,4 +1,5 @@
 
+
 import React from 'react'
 
 function TodoForm(props) {
@@ -11,8 +12,10 @@ function TodoForm(props) {
             placeholder='Add New Item'
             onChange={props.handleChanges}
         />
-        <button onClick = {props.addNewTask} type="submit">Add New Task</button>
-        <button onClick = {props.clearCompleted} >Clear Completed</button>
+        <div className="button-box">
+        <button onClick = {props.addNewTask} type="submit">+ Add New Task</button>
+        <button onClick = {props.clearCompleted} >- Clear Completed</button>
+        </div>
         </form>
     )
 }

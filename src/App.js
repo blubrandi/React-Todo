@@ -3,18 +3,7 @@ import React from 'react';
 import TodoList from './components/TodoComponents/TodoList'
 import TodoForm from './components/TodoComponents/TodoForm'
 
-const todosArray = [
-  {
-    task: 'Organize Garage',
-    id: 1528817077286,
-    completed: false
-  },
-  {
-    task: 'Bake Cookies',
-    id: 1528817084358,
-    completed: false
-  }
-];
+const todosArray = [];
 
 class App extends React.Component {
   constructor() {
@@ -39,7 +28,6 @@ class App extends React.Component {
     }
 
 
-
   addNewTask = (event) => {
     event.preventDefault();
     const newTask = { task: this.state.todo, completed: false, id: Date.now()}
@@ -50,7 +38,6 @@ class App extends React.Component {
   }
 
   toggleItem = todoId => {
-    console.log(` toggleItem ${todoId}`)
     this.setState(prevState => {
       return {
         todos: prevState.todos.map(todo => {
@@ -69,9 +56,10 @@ class App extends React.Component {
 
 
   render() {
+          
     return (
-      <div>
-        <h1>This is your Todo List:</h1>
+      <div className="app">
+        <h1>Todo List</h1>
         <TodoList
           todos = {this.state.todos}
           toggleItem={this.toggleItem}
