@@ -30,7 +30,8 @@ h1 {
 }
 
 .app {
-    max-width: 60%;
+    width: 60%;
+    max-width: 800px;
     margin: 0 auto;
     background-color: #333;
     padding: 10px 2rem 2rem 2rem;
