@@ -112,4 +112,8 @@ input {
     .todo {
         padding: 1.4rem 1.4rem 0 1.4rem;
     }
+
+    input {
+        width: 96%;
+    }
 }
